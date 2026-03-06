@@ -1,0 +1,31 @@
+*/=======================================================================================/*
+============================= Log Perubahan dan Note Bug ==================================
+*/=======================================================================================/*
+
+aturan tanda comment :
+    # = comment perubahan/permasalahan normal/standard
+    #! = comment permasalahan darurat
+    #0 = comment permasalahan belum selesai/proses
+    #1 = comment permasalahan selesai/final
+
+aturan line "jangan pakai button space, pakailah button tab"
+
+
+***========================== Log Perubahan ==========***
+
+    Rumusan deskripsi "tanda comment" - "deskripsi perubahan" - "File Perubahan" - "nama operator"
+
+    # Menambahkan Controller User "D:\laragon\www\TurningCode\app\Http\Controllers\ControllerUser" (Hanzz)
+    # -
+    # -
+    # -
+
+
+***========================== Log Bug ==========***
+
+    Rumusan deskripsi "tanda comment" - "deskripsi permasalahan" - "File permasalahan" - "nama operator"
+
+    #0 Nggk bisa masuk halaman login "D:\laragon\www\TurningCode\resources\views\login.blade.php" (Hanzz)
+    # -
+    # -
+    # -

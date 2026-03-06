@@ -10,10 +10,10 @@
 ## Developer Team TurningCode
 
 - [HanzzSama](https://github.com/HanzzSama).
-- [AndikaPutraSusiawan](https://github.com/Aps690)
-- [Hiqmal9391](https://github.com/kasogihiqmal01-maker).
-- [Dandibdr2209](https://github.com/dandibdr2209-cmyk).
-- [Halena Azalia Mirabel Firdiyanto](https://github.com/halenafirdiyanto-byte).
+- []()
+- []().
+- []().
+- []().
 
 
 ## About TurningCode

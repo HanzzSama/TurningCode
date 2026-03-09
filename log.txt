@@ -50,7 +50,7 @@ aturan line "jangan pakai button space, pakailah button tab"
     Rumusan deskripsi "tanda comment" - "deskripsi perubahan" - "File Perubahan" - "nama operator"
 
     # Menambahkan Controller User "D:\laragon\www\TurningCode\app\Http\Controllers\ControllerUser" (Hanzz)
-    # -
+    # menambahkan MVC Data "D:\laragon\www\TurningCode\" (Hanzz)
     # -
     # -
 
@@ -59,7 +59,7 @@ aturan line "jangan pakai button space, pakailah button tab"
 
     Rumusan deskripsi "tanda comment" - "deskripsi permasalahan" - "File permasalahan" - "nama operator"
 
-    #0 Nggk bisa masuk halaman login "D:\laragon\www\TurningCode\resources\views\login.blade.php" (Hanzz)
+    # Nggk bisa masuk halaman login "D:\laragon\www\TurningCode\resources\views\login.blade.php" (Hanzz)
     # -
     # -
     # -

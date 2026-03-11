@@ -51,6 +51,41 @@ aturan line "jangan pakai button space, pakailah button tab"
 
     # Menambahkan Controller User "D:\laragon\www\TurningCode\app\Http\Controllers\ControllerUser" (Hanzz)
     # menambahkan MVC Data "D:\laragon\www\TurningCode\" (Hanzz)
+    # nambah file view "index" (Hanzz)
+    # nambah folder "components, auth" (Hanzz)
+    # nambah file view "adminPage" (Hanzz)
+    # nambah file view "aside" (Hanzz)
+    # nambah file view "card" (Hanzz)
+    # nambah file view "header" (Hanzz)
+    # nambah file view "history" (Hanzz)
+    # nambah file view "lastMaterial" (Hanzz)
+    # nambah file view "nav" (Hanzz)
+    # nambah file view "other" (Hanzz)
+    # nambah file view "progres" (Hanzz)
+    # nambah file view "showMaterial" (Hanzz)
+    # nambah file view "tools" (Hanzz)
+    # nambah file view "login" (Hanzz)
+    # nambah file view "register" (Hanzz)
+    # nambah file controller "D:\laragon\www\TurningCode\app\Http\Controllers\AuthController" (Hanzz)
+    # buat sistem Auth "login/register" (Hanzz)
+    # perbarui web.php (Hanzz)
+    # nambah file scr js "aside.js" (Hanzz)
+    # nambah file scr js "loads.js" (Hanzz)
+    # nambah file scr js "showPass.js" (Hanzz)
+    # nambah file scr css "srtyle.css" (Hanzz)
+    # nambah file assets "default-user.jpg" (Hanzz)
+    # nambah file assets "img001.jpg" (Hanzz)
+    # nambah file assets "img002.jpg" (Hanzz)
+    # nambah file assets "img002.png" (Hanzz)
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
     # -
     # -
 
@@ -60,6 +95,20 @@ aturan line "jangan pakai button space, pakailah button tab"
     Rumusan deskripsi "tanda comment" - "deskripsi permasalahan" - "File permasalahan" - "nama operator"
 
     # Nggk bisa masuk halaman login "D:\laragon\www\TurningCode\resources\views\login.blade.php" (Hanzz)
+    # blm bisa upload gambar "D:\laragon\www\TurningCode\app\Http\Controllers\AuthController" (Hanzz)
+    # UI kurang rapi "D:\laragon\www\TurningCode\resources\views" (Hanzz)
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
+    # -
     # -
     # -
     # -

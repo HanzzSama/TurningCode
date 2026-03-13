@@ -7,7 +7,11 @@
                         <i class="bx bx-menu"></i>
                     </div>
                     <div>
-                        <h4>turning code</h4>
+                        <h4>turning code
+                            @if (auth()->user()->role == 'admin')
+                                - admin
+                            @endif
+                        </h4>
                     </div>
                 </div>
             </div>

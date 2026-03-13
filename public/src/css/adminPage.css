@@ -1,0 +1,17 @@
+.container-admin{
+    display: flex;
+    justify-content: center;
+}
+.main-admin{
+    width: 100%;
+    max-width: 79em;
+    display: flex;
+    gap: 2px;
+}
+.main-admin>div{
+    width: 100%;
+    /* background: red; */
+}
+.main-admin>div:last-child{
+    max-width: 25em;
+}

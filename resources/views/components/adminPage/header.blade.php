@@ -1,5 +1,5 @@
 <div>
     <main>
-        <h2>detail materi</h2>
+        <div><h2>header</h2></div>
     </main>
 </div>

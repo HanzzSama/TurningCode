@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="thumb-header">
-            <img src="{{ asset('assets/img/img002.png') }}" alt="Thumbnail" />
+            <img src="{{ asset('assets/ico/img002.png') }}" alt="Thumbnail" />
         </div>
     </header>
 </div>

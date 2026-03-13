@@ -1,5 +1,22 @@
-<div>
-    <main>
-        <h2>halaman admin</h2>
+<div id="desktop-warning">
+    <div>
+        <h2>Admin Panel hanya bisa diakses di Desktop</h2>
+        <p>Silakan gunakan layar minimal 1024px</p>
+    </div>
+</div>
+<div class="container container-admin adminbar">
+    <main class="main-admin">
+        <div>
+            @include('components.adminPage.header')
+        </div>
+        <div>
+            @include('components.adminPage.leaderboard')
+        </div>
+        {{-- @include() --}}
+        {{-- @include() --}}
+        {{-- @include() --}}
+        {{-- @include() --}}
+        {{-- @include() --}}
+        {{-- @include() --}}
     </main>
 </div>

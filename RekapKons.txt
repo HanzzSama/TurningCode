@@ -1,0 +1,114 @@
+***========================== Rekap Kontribusi ==========***
+
+    # Sel, 10 Mar 26
+        @Andika     = True
+        @Hiqmal     = True
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = False
+        @Halena     = False
+    # Rab, 11 Mar 26
+        @Andika     = True
+        @Hiqmal     = True
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -
+    # -, - - 26
+        @Andika     = -
+        @Hiqmal     = -
+        @Bahtiar    = -
+        @Rahma      = -
+        @Haidar     = -
+        @Halena     = -

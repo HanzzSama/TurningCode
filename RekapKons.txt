@@ -14,20 +14,20 @@
         @Rahma      = False
         @Haidar     = True
         @Halena     = False
-    # -, - - 26
-        @Andika     = -
-        @Hiqmal     = -
-        @Bahtiar    = -
-        @Rahma      = -
-        @Haidar     = -
-        @Halena     = -
-    # -, - - 26
-        @Andika     = -
-        @Hiqmal     = -
-        @Bahtiar    = -
-        @Rahma      = -
-        @Haidar     = -
-        @Halena     = -
+    # Kam, 12 Mar 26
+        @Andika     = True
+        @Hiqmal     = True
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
+    # jum, 13 Mar 26
+        @Andika     = True
+        @Hiqmal     = False
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -

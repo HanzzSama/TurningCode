@@ -47,7 +47,11 @@
                 {{-- NAV LINKS --}}
                 <figure>
                     {{-- Home --}}
-                    <a href="/" class="{{ request()->is('/') ? 'disabled' : '' }}">
+                    <a href="@if (Auth::user()->role === 'admin')
+                        /admin
+                        @else
+                        /
+                    @endif" class="{{ request()->is('/') ? 'disabled' : '' }}">
                         <div class="box-aside">
                             <div>
                                 <i class="bx bxs-home"></i>

@@ -2,16 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
+
+    public function index()
+    {
+        //
+    }
 
     public function showLogin()
     {
@@ -45,17 +51,16 @@ class AuthController extends Controller
                 'role' => 'user'
             ]);
 
-            return redirect('/login')->with('success','Register berhasil, silakan login');
-
+            return redirect('/login')->with('success', 'Register berhasil, silakan login');
         } catch (\Exception $e) {
-            \Log::error('Gagal registrasi: '.$e->getMessage());
-            return back()->with('error','Registrasi gagal. Silakan coba lagi.');
+            return back()->with('error', 'Registrasi gagal. Silakan coba lagi.');
         }
     }
 
     public function login(Request $request)
     {
-        $email = $request->email;
+        // ambil email dari input atau session
+        $email = $request->email ?? session('admin_email');
         $codeInput = $request->input('codeOTP', $request->password);
 
         $adminEmails = [
@@ -63,17 +68,20 @@ class AuthController extends Controller
             'Jester@turncode.com' => 'susiawanandika06@gmail.com',
             'ghostface@turncode.com' => 'kasogihiqmal01@gmail.com',
             'Mychel09@turncode.com' => 'dandibdr2209@gmail.com',
+            'maousama@turncode.com' => 'cyberthang999@gmail.com'
         ];
 
-        // Jika admin login pertama kali (password kosong)
         if (array_key_exists($email, $adminEmails) && empty($codeInput)) {
+
+            // simpan email ke session (INI YANG PENTING)
+            session(['admin_email' => $email]);
+
             $code = rand(100000, 999999);
-            $hashedCode = Hash::make($code);
 
             DB::table('admin_codes')->updateOrInsert(
                 ['email' => $email],
                 [
-                    'code' => $hashedCode,
+                    'code' => Hash::make($code),
                     'expired_at' => now()->addMinutes(10),
                     'updated_at' => now(),
                     'created_at' => now()
@@ -81,47 +89,63 @@ class AuthController extends Controller
             );
 
             try {
-                Mail::raw("Kode login admin Anda: $code", function($message) use ($adminEmails, $email){
+                Mail::raw("Kode login admin Anda: $code", function ($message) use ($adminEmails, $email) {
                     $message->to($adminEmails[$email])
-                            ->subject("Kode Login Admin TurningCode");
+                        ->subject("Kode Login Admin TurningCode");
                 });
             } catch (\Exception $e) {
-                return back()->with('error', 'Gagal mengirim kode OTP: ' . $e->getMessage());
+                return back()->with('error', 'Gagal mengirim kode OTP');
             }
 
-            return back()->with('info','Kode login admin telah dikirim ke email terkait.');
+            return back()->with('info', 'Kode OTP sudah dikirim');
         }
 
-        // Jika admin input kode OTP
         if (array_key_exists($email, $adminEmails)) {
+
             $adminCode = DB::table('admin_codes')
                 ->where('email', $email)
-                ->where('expired_at','>', now())
+                ->where('expired_at', '>', now())
                 ->first();
 
             if ($adminCode && Hash::check($codeInput, $adminCode->code)) {
+
                 $user = User::firstOrCreate(
                     ['email' => $email],
-                    ['name' => 'Admin', 'password' => Hash::make(Str::random(12)), 'role'=>'admin']
+                    [
+                        'name' => 'Admin',
+                        'password' => Hash::make(Str::random(12)),
+                        'role' => 'admin'
+                    ]
                 );
 
                 Auth::login($user);
-                DB::table('admin_codes')->where('email',$email)->delete();
+                $request->session()->regenerate();
+                $user->last_seen = now();
+                $user->save();
+                $user->update([
+                    'last_seen' => now()
+                ]);
+                // hapus OTP & session
+                DB::table('admin_codes')->where('email', $email)->delete();
+                session()->forget('admin_email');
 
-                return redirect('/admin')->with('success','Anda berhasil login sebagai admin');
+                return redirect('/admin')->with('success', 'Login admin berhasil');
             }
 
-            return back()->with('error','Kode admin salah atau kadaluarsa.');
+            return back()->with('error', 'Kode salah atau kadaluarsa');
         }
 
-        // Login user biasa
-        $credentials = $request->only('email','password');
-        if(Auth::attempt($credentials)){
+        // =====================
+        // LOGIN USER BIASA
+        // =====================
+        if (Auth::attempt($request->only('email', 'password'))) {
             $request->session()->regenerate();
-            return Auth::user()->role == 'admin' ? redirect('/admin') : redirect('/');
+            return Auth::user()->role == 'admin'
+                ? redirect('/admin')
+                : redirect('/');
         }
 
-        return back()->with('error','Email atau password salah');
+        return back()->with('error', 'Email atau password salah');
     }
 
     public function logout(Request $request)
@@ -132,7 +156,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login')->with('success','Anda berhasil log out');
-
+        return redirect('/login')->with('success', 'Anda berhasil log out');
     }
 }

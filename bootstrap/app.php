@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => \App\Http\Middleware\RoleMiddleware::class,
             'desktop' => \App\Http\Middleware\DesktopOnly::class,
+            'web' => \App\Http\Middleware\UpdateLastSeen::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

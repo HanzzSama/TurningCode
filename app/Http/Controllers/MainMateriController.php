@@ -13,14 +13,7 @@ class MainMateriController extends Controller
      */
     public function index()
     {
-        $mainMateri = MainMateri::withCount('materis')->get();
-
-        return view('index',[
-            'page' => 'home',
-            'mainMateri' => $mainMateri,
-            'materi' => null,
-            'subMateris' => []
-        ]);
+        //
     }
 
     /**
@@ -50,7 +43,7 @@ class MainMateriController extends Controller
 
         $subMateris = $materi->materis; // relasi one-to-many
 
-        return view('index',[
+        return view('index', [
             'page' => 'materi',
             'mainMateri' => $mainMateri,
             'materi' => $materi,

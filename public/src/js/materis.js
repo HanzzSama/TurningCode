@@ -2,67 +2,74 @@ const wrapper = document.querySelector(".wrapper-material");
 const cards = document.querySelectorAll(".box-material");
 
 /* =========================
-   Scroll ke card tertentu
+   Center card
 ========================= */
-function centerCard(index){
-
-    const card = cards[index];
-
+function centerCard(card) {
     const scrollPosition =
-        card.offsetLeft -
-        wrapper.offsetWidth / 2 +
-        card.offsetWidth / 2;
+        card.offsetLeft - wrapper.offsetWidth / 2 + card.offsetWidth / 2;
 
-    wrapper.scrollLeft = scrollPosition;
-
+    wrapper.scrollTo({
+        left: scrollPosition,
+        behavior: "smooth",
+    });
 }
 
+/* =========================
+   Update active card
+========================= */
+function setActive(card) {
+    cards.forEach((c) => c.classList.remove("active"));
+    card.classList.add("active");
+}
 
 /* =========================
-   Detect card tengah
+   Detect card tengah saat scroll
 ========================= */
-function updateCenterCard(){
-
+function updateCenterCard() {
     const wrapperRect = wrapper.getBoundingClientRect();
     const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
 
     let closestCard = null;
     let closestDistance = Infinity;
 
-    cards.forEach(card => {
-
-        const cardRect = card.getBoundingClientRect();
-        const cardCenter = cardRect.left + cardRect.width / 2;
+    cards.forEach((card) => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
 
         const distance = Math.abs(wrapperCenter - cardCenter);
 
-        if(distance < closestDistance){
+        if (distance < closestDistance) {
             closestDistance = distance;
             closestCard = card;
         }
-
     });
 
-    cards.forEach(card => card.classList.remove("active"));
-
-    if(closestCard){
-        closestCard.classList.add("active");
+    if (closestCard) {
+        setActive(closestCard);
     }
-
 }
 
+/* =========================
+   Click card
+========================= */
+cards.forEach((card) => {
+    card.addEventListener("click", () => {
+        setActive(card); // aktifkan card yg dipilih
+        centerCard(card); // pindahkan ke tengah
+    });
+});
 
 /* =========================
-   Event
+   Scroll event
 ========================= */
-
 wrapper.addEventListener("scroll", updateCenterCard);
 
+/* =========================
+   Load awal
+========================= */
 window.addEventListener("load", () => {
+    const middle = Math.floor(cards.length / 2);
 
-    /* card ke 2 jadi posisi awal */
-    centerCard(1);
-
-    updateCenterCard();
-
+    setActive(cards[middle]);
+    centerCard(cards[middle]);
 });

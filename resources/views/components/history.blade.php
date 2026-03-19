@@ -22,91 +22,44 @@
                 </div>
             </div>
             <div class="wrapper-history-list">
-                <div class="box-history">
-                    <div class="thumb-history">
-                        <div>
-                            <span></span>
-                        </div>
+                @if (isset($histories) && count($histories) > 0)
+
+                    <div class="wrapper-history-list">
+
+                        @foreach ($histories as $history)
+                            <a href="/detail/{{ $history->submateri->id }}">
+
+                                <div class="box-history">
+
+                                    <div class="thumb-history">
+                                        <div>
+                                            <span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-history">
+                                        <div>
+                                            <h4>{{ $history->submateri->materi->title }}</h4>
+                                            <h6>{{ $history->submateri->title }}</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="icon-menu-history">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                    </div>
+
+                                </div>
+
+                            </a>
+
+                            <hr />
+                        @endforeach
+
                     </div>
-                    <div class="text-history">
-                        <div>
-                            <h4>javascript</h4>
-                            <h6>pengenalan javascript</h6>
-                        </div>
-                    </div>
-                    <div class="icon-menu-history">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                    </div>
-                </div>
-                <hr />
-                <div class="box-history">
-                    <div class="thumb-history">
-                        <div>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="text-history">
-                        <div>
-                            <h4>javascript</h4>
-                            <h6>pengenalan javascript</h6>
-                        </div>
-                    </div>
-                    <div class="icon-menu-history">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                    </div>
-                </div>
-                <hr />
-                <div class="box-history">
-                    <div class="thumb-history">
-                        <div>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="text-history">
-                        <div>
-                            <h4>javascript</h4>
-                            <h6>pengenalan javascript</h6>
-                        </div>
-                    </div>
-                    <div class="icon-menu-history">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                    </div>
-                </div>
-                <hr />
-                <div class="box-history">
-                    <div class="thumb-history">
-                        <div>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="text-history">
-                        <div>
-                            <h4>javascript</h4>
-                            <h6>pengenalan javascript</h6>
-                        </div>
-                    </div>
-                    <div class="icon-menu-history">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                    </div>
-                </div>
-                <hr />
-                <div class="box-history">
-                    <div class="thumb-history">
-                        <div>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="text-history">
-                        <div>
-                            <h4>javascript</h4>
-                            <h6>pengenalan javascript</h6>
-                        </div>
-                    </div>
-                    <div class="icon-menu-history">
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                    </div>
-                </div>
-                <hr />
+                @else
+                    <p style="padding:20px">Belum ada history belajar</p>
+
+                @endif
             </div>
         </div>
     </main>

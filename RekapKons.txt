@@ -28,87 +28,101 @@
         @Rahma      = False
         @Haidar     = True
         @Halena     = False
+    # sab, 14 Mar 26
+        @Andika     = True
+        @Hiqmal     = True
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
+    # Sen, 16 Mar 26
+        @Andika     = True
+        @Hiqmal     = False
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = False
+        @Halena     = False
+    # Sel, 17 Mar 26
+        @Andika     = True
+        @Hiqmal     = False
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
+    # Rab, 18 Mar 26
+        @Andika     = True
+        @Hiqmal     = True
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
+    # Kam, 19 Mar 26
+        @Andika     = True
+        @Hiqmal     = False
+        @Bahtiar    = False
+        @Rahma      = False
+        @Haidar     = True
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
+        @Halena     = False
     # -, - - 26
         @Andika     = -
         @Hiqmal     = -
         @Bahtiar    = -
-        @Rahma      = -
+        @Rahma      = False
         @Haidar     = -
-        @Halena     = -
-    # -, - - 26
-        @Andika     = -
-        @Hiqmal     = -
-        @Bahtiar    = -
-        @Rahma      = -
-        @Haidar     = -
-        @Halena     = -
-    # -, - - 26
-        @Andika     = -
-        @Hiqmal     = -
-        @Bahtiar    = -
-        @Rahma      = -
-        @Haidar     = -
-        @Halena     = -
-    # -, - - 26
-        @Andika     = -
-        @Hiqmal     = -
-        @Bahtiar    = -
-        @Rahma      = -
-        @Haidar     = -
-        @Halena     = -
+        @Halena     = False

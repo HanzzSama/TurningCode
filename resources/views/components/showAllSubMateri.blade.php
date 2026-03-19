@@ -22,20 +22,24 @@
 
         <div class="wrapper-show-materi">
 
-            @foreach ($subMateris as $subMateri)
-                <a href="">
-                    <div class="box-show-materi">
+            @foreach ($submateris as $subMateri)
+                <a href="/belajar/{{ $subMateri->id }}">
+
+                    <div class="box-show-materi {{ in_array($subMateri->id, $completed) ? 'completed' : '' }}">
+
                         <div>
 
                             <div class="icon-show-materi"></div>
 
                             <div>
                                 <h4>{{ $subMateri->title }}</h4>
-                                <h5>{{ $subMateri->content }}</h5>
+                                <h5>{{ Str::limit(strip_tags($subMateri->content), 80) }}</h5>
                             </div>
 
                         </div>
+
                     </div>
+
                 </a>
             @endforeach
 

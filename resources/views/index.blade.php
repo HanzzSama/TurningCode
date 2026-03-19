@@ -74,34 +74,33 @@
         <div class="page-admin">
             @include('components.adminPage')
         </div>
-
-        {{-- MATERI PAGE --}}
     @elseif ($page == 'materi')
         @include('components.tools')
         @include('components.showAllMateris')
-
-        {{-- SUB MATERI PAGE --}}
     @elseif ($page == 'submateri')
         @include('components.tools')
         @include('components.showAllSubMateri')
+    @elseif ($page == 'detailSubmateri')
+        @include('components.showSubmateri')
     @endif
 
-    {{-- Bottom space --}}
     <div class="bottom-space"></div>
 
-    {{-- Bottom Navigation --}}
     @if ($page != 'login' && $page != 'register' && $page != 'admin')
         @include('components.navBottom')
     @endif
 
 
     {{-- Scripts --}}
-    <script src="{{ asset('src/js/adminWarn.js') }}"></script>
     <script src="{{ asset('src/js/aside.js') }}"></script>
+    <script src="{{ asset('src/js/navBar.js') }}"></script>
+    <script src="{{ asset('src/js/adminWarn.js') }}"></script>
     <script src="{{ asset('src/js/navPage.js') }}"></script>
     <script src="{{ asset('src/js/materis.js') }}"></script>
     <script src="{{ asset('src/js/showPass.js') }}"></script>
     <script src="{{ asset('src/js/loads.js') }}"></script>
+    <script src="{{ asset('src/js/adminChat.js') }}"></script>
+    <script src="{{ asset('src/js/app.js') }}"></script>
     <script src="{{ asset('src/js/navBottomToggle.js') }}"></script>
 
 </body>

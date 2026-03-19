@@ -1,4 +1,4 @@
-<div class="container container-nav navbar">
+<div class="container container-nav navbar" id="navBar">
     <nav class="main-nav">
         <div class="wrapper-nav">
             <div class="box-nav">
@@ -21,7 +21,8 @@
                         <i class="bx bx-message"></i>
                     </div>
                     <div>
-                        <i class="bx bx-search"></i>
+                        <i class="bx bx-search" id="searchBar"></i>
+                        <input type="search" placeholder="Pencarian">
                     </div>
                 </div>
             </div>

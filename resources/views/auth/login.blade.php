@@ -12,12 +12,17 @@
 
                 <div class="input-group">
                     <i class='bx bx-envelope'></i>
-                    <input type="email" name="email" placeholder="Email Address">
+                    @if(session('admin_email'))
+                        <input type="hidden" name="email" placeholder="Email Address" value="{{ session('admin_email') }}">
+                        <p>Email: {{ session('admin_email') }}</p>
+                    @else
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    @endif
                 </div>
 
                 <div class="input-group">
                     <i class='bx bx-lock-alt'></i>
-                    <input type="password" name="password" id="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="{{ session('info') ? 'Masukkan kode OTP' : 'Password' }}">
                     <i class='bx bx-show eye' id="togglePassword"></i>
                 </div>
 

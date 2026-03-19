@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSubMateriRequest;
 use App\Http\Requests\UpdateSubMateriRequest;
+use Illuminate\Support\Facades\Auth;
+use App\Models\History;
 use App\Models\Materi;
 use App\Models\SubMateri;
 
@@ -38,14 +40,54 @@ class SubMateriController extends Controller
      */
     public function show($id)
     {
+
         $materi = Materi::findOrFail($id);
 
-        $subMateris = SubMateri::where('materi_id', $id)->get();
+        $submateris = SubMateri::where('materi_id',$id)->get();
+
+        $completed = [];
+
+        if(Auth::check()){
+            $completed = History::where('user_id',Auth::id())
+                ->pluck('submateri_id')
+                ->toArray();
+        }
 
         return view('index',[
             'page' => 'submateri',
             'materi' => $materi,
-            'subMateris' => $subMateris
+            'submateris' => $submateris,
+            'completed' => $completed
+        ]);
+
+    }
+
+    public function showDetail($id)
+    {
+        $submateri = SubMateri::with('materi.mainMateri')->findOrFail($id);
+
+        $prev = SubMateri::where('materi_id',$submateri->materi_id)
+            ->where('id','<',$submateri->id)
+            ->orderBy('id','desc')
+            ->first();
+
+        $next = SubMateri::where('materi_id',$submateri->materi_id)
+            ->where('id','>',$submateri->id)
+            ->orderBy('id','asc')
+            ->first();
+
+        if(Auth::check()){
+            History::firstOrCreate([
+                'user_id' => Auth::id(),
+                'submateri_id' => $submateri->id
+            ]);
+        }
+
+        return view('index',[
+            'page'=>'detailSubmateri',
+            'submateri'=>$submateri,
+            'prev'=>$prev,
+            'next'=>$next
         ]);
     }
 
